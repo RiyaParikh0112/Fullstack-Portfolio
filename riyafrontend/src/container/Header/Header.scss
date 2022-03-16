@@ -1,0 +1,286 @@
+#home {
+  position: relative;
+  // background: url('../../assets/bgIMG.png');
+  // background-size: cover;
+  // background-position: center;
+  // background-repeat: repeat;
+
+  // disable the default padding styles
+  .app__wrapper {
+    padding: 0;
+  }
+}
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  } /* The following five values can be played with to make the waving more or less extreme */
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  } /* Reset for the last half to pause */
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.app__header {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  flex-direction: row;
+
+  padding: 6rem 2rem 0rem;
+
+  @media screen and (min-width: 2000px) {
+    padding-top: 8rem;
+  }
+
+  @media screen and (max-width: 1200px) {
+    flex-direction: column;
+  }
+
+  @media screen and (max-width: 450px) {
+    padding: 6rem 1rem 2rem;
+  }
+}
+
+.app__header-info {
+  flex: 0.65;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 100%;
+
+  margin: 0 2rem;
+
+  @media screen and (max-width: 1200px) {
+    width: 100%;
+    margin-right: 0rem;
+  }
+}
+
+.app__header-badge {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-direction: column;
+
+  .badge-cmp span {
+    animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
+    animation-duration: 2.5s; /* Change to speed up or slow down */
+    animation-iteration-count: infinite;
+  }
+
+  .badge-cmp,
+  .tag-cmp {
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    background: hsla(0, 0%, 100%, 0.35);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+    color: black;
+    border: 0.05rem solid white;
+    border-radius: 30px;
+    flex-direction: row;
+    width: auto;
+
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .tag-cmp {
+    flex-direction: column;
+    margin-top: 1rem;
+
+    p {
+      width: 100%;
+
+      // text-transform: uppercase;
+      text-align: right;
+      color: black;
+      font-size: 14px;
+      text-align: center;
+    }
+    button {
+      font-size: 30px;
+      font-family: 'Poppins';
+      background: linear-gradient(
+        to bottom,
+        transparent 50%,
+        rgb(252, 140, 215) 50%
+      );
+
+      border: none;
+    }
+    button:hover {
+      cursor: pointer;
+      background: linear-gradient(
+        to bottom,
+        transparent 50%,
+        rgb(243, 72, 129) 50%
+      );
+    }
+  }
+  .badge-cmp h1 {
+    background: linear-gradient(
+      to bottom,
+      transparent 60%,
+      rgb(250, 176, 39) 50%
+    );
+  }
+
+  span {
+    font-size: 2.5rem;
+
+    @media screen and (min-width: 2000px) {
+      font-size: 5rem;
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
+
+.app__header-circles {
+  flex: 0.75;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  height: 100%;
+  margin-left: 1rem;
+
+  div {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+
+    background: hsla(0, 0%, 100%, 0.25);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+    border: 0.05rem solid white;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+
+    img {
+      width: 50%;
+      height: 50%;
+    }
+  }
+
+  // circles with different height & width
+
+  div:nth-child(1) {
+    width: 100px;
+    height: 100px;
+  }
+
+  div:nth-child(2) {
+    margin: 0.5rem;
+    margin-left: 3rem;
+    width: 150px;
+    height: 150px;
+  }
+
+  div:nth-child(3) {
+    margin-left: 4rem;
+    width: 120px;
+    height: 120px;
+  }
+  div:nth-child(4) {
+    margin-left: -3rem;
+    margin-top: -4rem;
+    width: 80px;
+    height: 80px;
+  }
+
+  @media screen and (min-width: 2000px) {
+    div:nth-child(2) {
+      width: 400px;
+      height: 400px;
+    }
+
+    div:nth-child(3) {
+      width: 170px;
+      height: 170px;
+    }
+
+    div:nth-child(1) {
+      width: 200px;
+      height: 200px;
+    }
+    div:nth-child(4) {
+      margin-left: -3rem;
+      margin-top: -2rem;
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 0;
+
+    div {
+      margin: 1rem;
+    }
+  }
+}
+
+.app__header-img {
+  flex: 1;
+  height: 60%;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: relative;
+
+  img {
+    width: 100%;
+    object-fit: contain;
+    z-index: 1;
+  }
+
+  .overlay_circle {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  @media screen and (max-width: 1200px) {
+    margin: 2rem 0;
+  }
+}
+
+.blog {
+  text-decoration: none;
+  color: black;
+  font-size: 25px;
+  background: linear-gradient(
+    to bottom,
+    transparent 50%,
+    rgb(179, 241, 98) 50%
+  );
+  font-weight: 500;
+}

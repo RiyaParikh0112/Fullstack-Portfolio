@@ -1,0 +1,57 @@
+.Timeline {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  background: hsla(0, 0%, 100%, 0.25);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+  color: black;
+  border: 0.05rem solid white;
+  padding-bottom: 2rem;
+
+  margin: 4rem 2rem;
+}
+.Timeline h1 {
+  font-size: 48px;
+  margin-bottom: 4rem;
+  letter-spacing: 2px;
+  padding: 0 0.5rem;
+  background: linear-gradient(
+    to bottom,
+    transparent 50%,
+    rgb(109, 224, 253) 50%
+  );
+}
+h3 {
+  font-size: 18px;
+}
+.vertical-timeline-element-content {
+  background: hsla(0, 0%, 100%, 0.25) !important;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05) !important;
+  border: 0.05rem solid white !important;
+  border-radius: 25px !important;
+}
+
+#description {
+  margin: 0.5rem 0 0.3rem 0;
+  font-size: 14px;
+}
+
+.button-timeline {
+  text-decoration: none;
+  padding: 0.5em 1.5em !important;
+  border-radius: 25px;
+  color: white;
+}
+
+.graphicButton {
+  background-color: rgb(206, 136, 253);
+}
+.youtubeButton {
+  background-color: rgb(247, 91, 91);
+}
+
+.codeButton {
+  background-color: rgb(65, 207, 250);
+}
